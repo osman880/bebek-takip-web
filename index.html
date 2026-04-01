@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bebek Takip - Destek</title>
+    <title>Bebem: Bebek Takip & Emzirme - Destek</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
@@ -55,6 +55,52 @@
             transition: background 0.2s;
         }
         .contact-link:hover { background: #3B8CBF; }
+        .pro-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #F6AD55, #ED8936);
+            color: white;
+            font-size: 0.75em;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 6px;
+            margin-left: 6px;
+            vertical-align: middle;
+            letter-spacing: 0.5px;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 16px;
+        }
+        @media (max-width: 500px) {
+            .pricing-grid { grid-template-columns: 1fr; }
+        }
+        .pricing-item {
+            background: #f5f5f7;
+            border-radius: 14px;
+            padding: 16px 12px;
+            text-align: center;
+        }
+        .pricing-item .plan-name {
+            font-size: 0.85em;
+            color: #6e6e73;
+            margin-bottom: 4px;
+        }
+        .pricing-item .plan-price {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #1d1d1f;
+        }
+        .pricing-item .plan-note {
+            font-size: 0.78em;
+            color: #999;
+            margin-top: 2px;
+        }
+        .pricing-item.highlight {
+            background: linear-gradient(135deg, #50AADD15, #3B8CBF25);
+            border: 1.5px solid #50AADD55;
+        }
         .footer {
             text-align: center;
             padding: 30px 20px;
@@ -66,33 +112,70 @@
 </head>
 <body>
     <div class="header">
-        <h1>Bebek Takip</h1>
-        <p>Destek ve Yardim Merkezi</p>
+        <h1>Bebem</h1>
+        <p>Bebek Takip &amp; Emzirme - Destek Merkezi</p>
     </div>
     <div class="container">
+
         <div class="card">
-            <h2>Sikca Sorulan Sorular</h2>
+            <h2>Pro Abonelik</h2>
+            <p>Bebem Pro ile bebeginizin her anını daha akıllı takip edin. Üç farklı plan arasından size en uygununu seçin:</p>
+            <div class="pricing-grid">
+                <div class="pricing-item">
+                    <div class="plan-name">Aylık</div>
+                    <div class="plan-price">69,99 TL</div>
+                    <div class="plan-note">/ ay</div>
+                </div>
+                <div class="pricing-item highlight">
+                    <div class="plan-name">Yıllık</div>
+                    <div class="plan-price">449,99 TL</div>
+                    <div class="plan-note">/ yıl · %46 tasarruf</div>
+                </div>
+                <div class="pricing-item">
+                    <div class="plan-name">Ömür Boyu</div>
+                    <div class="plan-price">899 TL</div>
+                    <div class="plan-note">tek seferlik</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Pro Özellikler <span class="pro-badge">PRO</span></h2>
             <ul>
-                <li><strong>Verilerim guvenli mi?</strong><br>Evet, tum verileriniz yalnizca cihazinizda saklanir. Hicbir veri sunucuya gonderilmez.</li>
-                <li><strong>Bildirimleri nasil ayarlarim?</strong><br>Ayarlar sayfasindan bildirim tercihlerinizi ve araliklari kisisellestirebilirsiniz.</li>
-                <li><strong>Verileri yedekleyebilir miyim?</strong><br>Su an icin veriler cihazda yerel olarak saklanmaktadir. Yedekleme ozelligi ilerleyen surumlerde eklenecektir.</li>
-                <li><strong>Uygulama ucretli mi?</strong><br>Bebek Takip tamamen ucretsiz bir uygulamadir.</li>
+                <li><strong>Yapay Zeka Raporu</strong> — Beslenme, uyku ve gelişim verilerinizi analiz eden kişiselleştirilmiş AI raporları</li>
+                <li><strong>Ses Kütüphanesi</strong> — Bebeğinizi sakinleştirmek için beyaz gürültü ve ninni sesleri</li>
+                <li><strong>Sınırsız Fotoğraf Albümü</strong> — Bebeğinizin her anını sınır olmaksızın kaydedin</li>
+                <li><strong>Tüm Rehberler</strong> — Beslenme, uyku düzeni, gelişim ve sağlık rehberlerine tam erişim</li>
+                <li><strong>Geçmiş Kayıtlar</strong> — Tüm geçmiş verilere ve istatistiklere sınırsız erişim</li>
+                <li><strong>Reklamsız Deneyim</strong> — Hiçbir reklam görmeden kesintisiz kullanım</li>
             </ul>
         </div>
 
         <div class="card">
-            <h2>Iletisim</h2>
-            <p>Soru, oneri veya geri bildirimleriniz icin bize ulasabilirsiniz.</p>
-            <a class="contact-link" href="mailto:osmandede880@gmail.com">E-posta Gonder</a>
+            <h2>Sıkça Sorulan Sorular</h2>
+            <ul>
+                <li><strong>Verilerim güvenli mi?</strong><br>Evet, tüm verileriniz yalnızca cihazınızda saklanır. Kişisel bebek verileriniz hiçbir sunucuya gönderilmez.</li>
+                <li><strong>Bildirimleri nasıl ayarlarım?</strong><br>Ayarlar sayfasından bildirim tercihlerinizi ve aralıklarını kişiselleştirebilirsiniz.</li>
+                <li><strong>Ücretsiz sürümde ne var?</strong><br>Ücretsiz sürümde beslenme, uyku ve bez takibi gibi temel özellikler bulunur. Reklam gösterimi mevcuttur.</li>
+                <li><strong>Pro aboneliği nasıl iptal ederim?</strong><br>App Store &gt; Apple ID &gt; Abonelikler bölümünden istediğiniz zaman iptal edebilirsiniz. İptal sonrası mevcut dönem sonuna kadar Pro erişiminiz devam eder.</li>
+                <li><strong>Ömür boyu plan nedir?</strong><br>Tek seferlik 899 TL ödeyerek Pro özelliklere kalıcı olarak erişebilirsiniz. Aylık ya da yıllık ücret ödemezsiniz.</li>
+                <li><strong>Abonelik yenileme nasıl çalışır?</strong><br>Aylık ve yıllık planlar, dönem sonunda otomatik olarak yenilenir. App Store üzerinden yönetebilirsiniz.</li>
+            </ul>
         </div>
 
         <div class="card">
-            <h2>Uygulama Hakkinda</h2>
-            <p>Bebek Takip, bebeginizin beslenme, uyku, bez degisimi ve gelisim surecini kolayca takip etmenizi saglayan bir mobil uygulamadir. Tamamen cevrimi disi calisir ve gizliliginize saygi gosterir.</p>
+            <h2>İletişim</h2>
+            <p>Soru, öneri veya geri bildirimleriniz için bize ulaşabilirsiniz.</p>
+            <a class="contact-link" href="mailto:osmandede880@gmail.com">E-posta Gönder</a>
+        </div>
+
+        <div class="card">
+            <h2>Uygulama Hakkında</h2>
+            <p>Bebem: Bebek Takip &amp; Emzirme, bebeğinizin beslenme, emzirme, uyku, bez değişimi ve gelişim sürecini kolayca takip etmenizi sağlayan bir mobil uygulamadır. Temel özellikler çevrimiçi bağlantı gerektirmeden çalışır ve gizliliğinize saygı gösterir.</p>
         </div>
     </div>
     <div class="footer">
-        <p>&copy; 2025 Bebek Takip | <a href="privacy.html">Gizlilik Politikasi</a></p>
+        <p>&copy; 2026 Bebem: Bebek Takip &amp; Emzirme | <a href="privacy.html">Gizlilik Politikası</a></p>
     </div>
 </body>
 </html>
