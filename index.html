@@ -3,66 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bebem: Bebek Takip & Emzirme - Destek</title>
+    <title>Bebem: Bebek Takip & Emzirme — Destek</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f5f7;
-            color: #1d1d1f;
+            background: #F0F8FF;
+            color: #333;
             line-height: 1.6;
         }
-        .header {
-            background: linear-gradient(135deg, #50AADD, #3B8CBF);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .header h1 { font-size: 2.2em; margin-bottom: 8px; }
-        .header p { font-size: 1.1em; opacity: 0.9; }
         .container {
             max-width: 700px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px 24px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .header h1 {
+            font-size: 28px;
+            color: #2471A3;
+            margin-bottom: 8px;
+        }
+        .header p {
+            font-size: 16px;
+            color: #666;
         }
         .card {
-            background: white;
-            border-radius: 20px;
-            padding: 28px;
-            margin-bottom: 20px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.06);
         }
         .card h2 {
-            font-size: 1.3em;
-            margin-bottom: 12px;
-            color: #1d1d1f;
+            font-size: 20px;
+            color: #2471A3;
+            margin-bottom: 16px;
         }
-        .card p, .card li {
-            color: #6e6e73;
-            font-size: 0.95em;
+        .card p {
+            color: #555;
         }
-        .card ul { padding-left: 20px; margin-top: 8px; }
-        .card li { margin-bottom: 6px; }
-        .contact-link {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 10px 24px;
-            background: #50AADD;
-            color: white;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: 600;
-            transition: background 0.2s;
+        .features {
+            list-style: none;
         }
-        .contact-link:hover { background: #3B8CBF; }
+        .features li {
+            padding: 8px 0;
+            padding-left: 28px;
+            position: relative;
+            color: #555;
+        }
+        .features li::before {
+            content: "\2713";
+            position: absolute;
+            left: 0;
+            color: #50AADD;
+            font-weight: bold;
+        }
         .pro-badge {
             display: inline-block;
-            background: linear-gradient(135deg, #F6AD55, #ED8936);
-            color: white;
-            font-size: 0.75em;
+            background: linear-gradient(135deg, #F9A825, #F57F17);
+            color: #fff;
+            font-size: 11px;
             font-weight: 700;
             padding: 2px 8px;
-            border-radius: 6px;
+            border-radius: 8px;
             margin-left: 6px;
             vertical-align: middle;
             letter-spacing: 0.5px;
@@ -70,112 +76,200 @@
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 14px;
-            margin-top: 16px;
+            gap: 16px;
+            margin-top: 8px;
         }
-        @media (max-width: 500px) {
-            .pricing-grid { grid-template-columns: 1fr; }
-        }
-        .pricing-item {
-            background: #f5f5f7;
-            border-radius: 14px;
-            padding: 16px 12px;
+        .pricing-card {
+            border: 2px solid #D6EAF8;
+            border-radius: 12px;
+            padding: 20px;
             text-align: center;
         }
-        .pricing-item .plan-name {
-            font-size: 0.85em;
-            color: #6e6e73;
-            margin-bottom: 4px;
+        .pricing-card.best {
+            border-color: #2471A3;
+            background: #EBF5FB;
         }
-        .pricing-item .plan-price {
-            font-size: 1.2em;
+        .pricing-card .label {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 6px;
+        }
+        .pricing-card .price {
+            font-size: 22px;
             font-weight: 700;
-            color: #1d1d1f;
+            color: #2471A3;
         }
-        .pricing-item .plan-note {
-            font-size: 0.78em;
-            color: #999;
+        .pricing-card .period {
+            font-size: 13px;
+            color: #888;
             margin-top: 2px;
         }
-        .pricing-item.highlight {
-            background: linear-gradient(135deg, #50AADD15, #3B8CBF25);
-            border: 1.5px solid #50AADD55;
+        .pricing-card .save {
+            display: inline-block;
+            background: #2471A3;
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 8px;
+            margin-top: 6px;
+        }
+        .faq-item {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+        .faq-item strong {
+            display: block;
+            color: #333;
+            margin-bottom: 4px;
+        }
+        .faq-item span {
+            color: #666;
+            font-size: 14px;
+        }
+        .contact-info {
+            font-size: 16px;
+            color: #555;
+        }
+        .contact-info a {
+            color: #2471A3;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .links {
+            text-align: center;
+            margin-top: 32px;
+        }
+        .links a {
+            display: inline-block;
+            background: #2471A3;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 15px;
+            margin: 6px;
+        }
+        .links a:hover {
+            background: #1A5276;
         }
         .footer {
             text-align: center;
-            padding: 30px 20px;
+            margin-top: 48px;
             color: #999;
-            font-size: 0.85em;
+            font-size: 13px;
         }
-        .footer a { color: #50AADD; text-decoration: none; }
+        @media (max-width: 480px) {
+            .pricing-grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Bebem</h1>
-        <p>Bebek Takip &amp; Emzirme - Destek Merkezi</p>
-    </div>
     <div class="container">
-
-        <div class="card">
-            <h2>Pro Abonelik</h2>
-            <p>Bebem Pro ile bebeginizin her anını daha akıllı takip edin. Üç farklı plan arasından size en uygununu seçin:</p>
-            <div class="pricing-grid">
-                <div class="pricing-item">
-                    <div class="plan-name">Aylık</div>
-                    <div class="plan-price">69,99 TL</div>
-                    <div class="plan-note">/ ay</div>
-                </div>
-                <div class="pricing-item highlight">
-                    <div class="plan-name">Yıllık</div>
-                    <div class="plan-price">449,99 TL</div>
-                    <div class="plan-note">/ yıl · %46 tasarruf</div>
-                </div>
-                <div class="pricing-item">
-                    <div class="plan-name">Ömür Boyu</div>
-                    <div class="plan-price">899 TL</div>
-                    <div class="plan-note">tek seferlik</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2>Pro Özellikler <span class="pro-badge">PRO</span></h2>
-            <ul>
-                <li><strong>Yapay Zeka Raporu</strong> — Beslenme, uyku ve gelişim verilerinizi analiz eden kişiselleştirilmiş AI raporları</li>
-                <li><strong>Ses Kütüphanesi</strong> — Bebeğinizi sakinleştirmek için beyaz gürültü ve ninni sesleri</li>
-                <li><strong>Sınırsız Fotoğraf Albümü</strong> — Bebeğinizin her anını sınır olmaksızın kaydedin</li>
-                <li><strong>Tüm Rehberler</strong> — Beslenme, uyku düzeni, gelişim ve sağlık rehberlerine tam erişim</li>
-                <li><strong>Geçmiş Kayıtlar</strong> — Tüm geçmiş verilere ve istatistiklere sınırsız erişim</li>
-                <li><strong>Reklamsız Deneyim</strong> — Hiçbir reklam görmeden kesintisiz kullanım</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>Sıkça Sorulan Sorular</h2>
-            <ul>
-                <li><strong>Verilerim güvenli mi?</strong><br>Evet, tüm verileriniz yalnızca cihazınızda saklanır. Kişisel bebek verileriniz hiçbir sunucuya gönderilmez.</li>
-                <li><strong>Bildirimleri nasıl ayarlarım?</strong><br>Ayarlar sayfasından bildirim tercihlerinizi ve aralıklarını kişiselleştirebilirsiniz.</li>
-                <li><strong>Ücretsiz sürümde ne var?</strong><br>Ücretsiz sürümde beslenme, uyku ve bez takibi gibi temel özellikler bulunur. Reklam gösterimi mevcuttur.</li>
-                <li><strong>Pro aboneliği nasıl iptal ederim?</strong><br>App Store &gt; Apple ID &gt; Abonelikler bölümünden istediğiniz zaman iptal edebilirsiniz. İptal sonrası mevcut dönem sonuna kadar Pro erişiminiz devam eder.</li>
-                <li><strong>Ömür boyu plan nedir?</strong><br>Tek seferlik 899 TL ödeyerek Pro özelliklere kalıcı olarak erişebilirsiniz. Aylık ya da yıllık ücret ödemezsiniz.</li>
-                <li><strong>Abonelik yenileme nasıl çalışır?</strong><br>Aylık ve yıllık planlar, dönem sonunda otomatik olarak yenilenir. App Store üzerinden yönetebilirsiniz.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>İletişim</h2>
-            <p>Soru, öneri veya geri bildirimleriniz için bize ulaşabilirsiniz.</p>
-            <a class="contact-link" href="mailto:osmandede880@gmail.com">E-posta Gönder</a>
+        <div class="header">
+            <h1>Bebem: Bebek Takip &amp; Emzirme</h1>
+            <p>Bebeğinizin Her Anını Kolayca Takip Edin</p>
         </div>
 
         <div class="card">
             <h2>Uygulama Hakkında</h2>
-            <p>Bebem: Bebek Takip &amp; Emzirme, bebeğinizin beslenme, emzirme, uyku, bez değişimi ve gelişim sürecini kolayca takip etmenizi sağlayan bir mobil uygulamadır. Temel özellikler çevrimiçi bağlantı gerektirmeden çalışır ve gizliliğinize saygı gösterir.</p>
+            <p>Bebem, bebeğinizin beslenme, emzirme, uyku, bez değişimi ve gelişim sürecini kolayca takip etmenizi sağlayan bir mobil uygulamadır. Temel özellikler çevrimiçi bağlantı gerektirmeden çalışır ve gizliliğinize saygı gösterir. Pro üyelikle yapay zeka destekli özelliklerden yararlanın.</p>
         </div>
-    </div>
-    <div class="footer">
-        <p>&copy; 2026 Bebem: Bebek Takip &amp; Emzirme | <a href="privacy.html">Gizlilik Politikası</a></p>
+
+        <div class="card">
+            <h2>Ücretsiz Özellikler</h2>
+            <ul class="features">
+                <li>Emzirme ve mama takibi (süre, miktar, taraf)</li>
+                <li>Uyku takibi (başlangıç, bitiş, toplam süre)</li>
+                <li>Bez değişim kaydı</li>
+                <li>Büyüme takibi (kilo, boy, baş çevresi)</li>
+                <li>Bildirim ve hatırlatıcılar</li>
+                <li>Bebek profili ve birden fazla bebek desteği</li>
+                <li>Günlük ve haftalık istatistikler</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Pro Özellikler <span class="pro-badge">PRO</span></h2>
+            <ul class="features">
+                <li>Yapay Zeka Raporu — Beslenme, uyku ve gelişim verilerinizi analiz eden kişiselleştirilmiş AI raporları</li>
+                <li>Ses Kütüphanesi — Bebeğinizi sakinleştirmek için beyaz gürültü ve ninni sesleri</li>
+                <li>Sınırsız Fotoğraf Albümü — Bebeğinizin her anını sınır olmaksızın kaydedin</li>
+                <li>Tüm Rehberler — Beslenme, uyku düzeni, gelişim ve sağlık rehberlerine tam erişim</li>
+                <li>Geçmiş Kayıtlar — Tüm geçmiş verilere ve istatistiklere sınırsız erişim</li>
+                <li>Reklamsız Deneyim — Hiçbir reklam görmeden kesintisiz kullanım</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Pro Üyelik Fiyatları</h2>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="label">Aylık</div>
+                    <div class="price">&#8378;69,99</div>
+                    <div class="period">/ ay</div>
+                </div>
+                <div class="pricing-card best">
+                    <div class="label">Yıllık</div>
+                    <div class="price">&#8378;449,99</div>
+                    <div class="period">/ yıl</div>
+                    <span class="save">%46 Tasarruf</span>
+                </div>
+                <div class="pricing-card">
+                    <div class="label">Ömür Boyu</div>
+                    <div class="price">&#8378;899</div>
+                    <div class="period">tek seferlik</div>
+                </div>
+            </div>
+            <p style="margin-top:16px; font-size:14px; color:#888;">Abonelikler App Store üzerinden yönetilir. İstediğiniz zaman iptal edebilirsiniz.</p>
+        </div>
+
+        <div class="card">
+            <h2>Sıkça Sorulan Sorular</h2>
+            <div class="faq-item">
+                <strong>Verilerim güvenli mi?</strong>
+                <span>Ücretsiz sürümde herhangi bir veri toplanmaz ve uzak sunucuya gönderilmez; tüm verileriniz yalnızca cihazınızda saklanır. Pro sürümde ise AI özellikleri için veriler anonimleştirilerek sunuculara gönderilir; kişisel olarak tanımlanabilir hiçbir bilgi iletilmez.</span>
+            </div>
+            <div class="faq-item">
+                <strong>Pro aboneliği nasıl iptal ederim?</strong>
+                <span>App Store &gt; Apple ID &gt; Abonelikler bölümünden istediğiniz zaman iptal edebilirsiniz. İptal sonrası mevcut dönem sonuna kadar Pro erişiminiz devam eder.</span>
+            </div>
+            <div class="faq-item">
+                <strong>Ömür boyu plan nedir?</strong>
+                <span>Tek seferlik ödemeyle Pro özelliklere kalıcı olarak erişebilirsiniz. Aylık ya da yıllık ücret ödemezsiniz.</span>
+            </div>
+            <div class="faq-item">
+                <strong>Abonelik yenileme nasıl çalışır?</strong>
+                <span>Aylık ve yıllık planlar dönem sonunda otomatik olarak yenilenir. App Store üzerinden yönetebilirsiniz.</span>
+            </div>
+            <div class="faq-item">
+                <strong>Ücretsiz sürümde reklam var mı?</strong>
+                <span>Evet, ücretsiz sürümde Google AdMob aracılığıyla reklamlar gösterilir. Pro aboneliğe geçerek reklamlardan tamamen kurtulabilirsiniz.</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Destek &amp; İletişim</h2>
+            <div class="contact-info">
+                <p>Soru, öneri veya geri bildirimleriniz için bizimle iletişime geçebilirsiniz:</p>
+                <br>
+                <p><strong>E-posta:</strong> <a href="mailto:osmandede880@gmail.com">osmandede880@gmail.com</a></p>
+            </div>
+        </div>
+
+        <div class="links">
+            <a href="privacy.html">Gizlilik Politikası</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Bebem: Bebek Takip &amp; Emzirme. Tüm hakları saklıdır.</p>
+        </div>
     </div>
 </body>
 </html>

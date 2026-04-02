@@ -3,148 +3,338 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bebem: Bebek Takip & Emzirme - Gizlilik Politikası</title>
+    <title>Gizlilik Politikası — Bebem: Bebek Takip & Emzirme</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f5f7;
-            color: #1d1d1f;
+            background: #F0F8FF;
+            color: #333;
             line-height: 1.7;
         }
-        .header {
-            background: linear-gradient(135deg, #48BB78, #38A169);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        .header h1 { font-size: 2.2em; margin-bottom: 8px; }
-        .header p { font-size: 1.1em; opacity: 0.9; }
         .container {
             max-width: 700px;
             margin: 0 auto;
-            padding: 40px 20px;
+            padding: 40px 24px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            font-size: 28px;
+            color: #2471A3;
+            margin-bottom: 4px;
+        }
+        .header p {
+            font-size: 14px;
+            color: #999;
         }
         .card {
-            background: white;
-            border-radius: 20px;
-            padding: 28px;
-            margin-bottom: 20px;
+            background: #fff;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.06);
         }
         .card h2 {
-            font-size: 1.2em;
+            font-size: 18px;
+            color: #2471A3;
+            margin-bottom: 12px;
+        }
+        .card p {
             margin-bottom: 10px;
-            color: #1d1d1f;
+            color: #555;
         }
-        .card p, .card li {
-            color: #6e6e73;
-            font-size: 0.95em;
+        .card ul {
+            margin: 8px 0 8px 20px;
+            color: #555;
         }
-        .card ul { padding-left: 20px; margin-top: 8px; }
-        .card li { margin-bottom: 6px; }
-        .updated {
+        .card ul li {
+            padding: 3px 0;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+        .comparison-table th, .comparison-table td {
+            text-align: left;
+            padding: 12px 14px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+        }
+        .comparison-table th {
+            color: #2471A3;
+            font-size: 13px;
+            background: #EBF5FB;
+        }
+        .comparison-table th:first-child { border-radius: 8px 0 0 0; }
+        .comparison-table th:last-child { border-radius: 0 8px 0 0; }
+        .badge-free {
+            display: inline-block;
+            background: #E8F5E9;
+            color: #2E7D32;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+        .badge-pro {
+            display: inline-block;
+            background: linear-gradient(135deg, #F9A825, #F57F17);
+            color: #fff;
+            font-size: 11px;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 6px;
+        }
+        .highlight-box {
+            border-left: 4px solid;
+            border-radius: 0 8px 8px 0;
+            padding: 14px 16px;
+            margin: 12px 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+        .highlight-free {
+            background: #E8F5E9;
+            border-color: #4CAF50;
+        }
+        .highlight-free p {
+            color: #2E7D32;
+        }
+        .highlight-pro {
+            background: #FFF8E1;
+            border-color: #F9A825;
+        }
+        .highlight-pro p {
+            color: #E65100;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+        }
+        table th, table td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 14px;
+            color: #555;
+        }
+        table th {
+            color: #2471A3;
+            font-size: 13px;
+        }
+        .back-link {
             text-align: center;
-            padding: 20px;
-            color: #999;
-            font-size: 0.85em;
+            margin-top: 32px;
+        }
+        .back-link a {
+            display: inline-block;
+            background: #2471A3;
+            color: #fff;
+            padding: 12px 28px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .back-link a:hover {
+            background: #1A5276;
         }
         .footer {
             text-align: center;
-            padding: 30px 20px;
+            margin-top: 48px;
             color: #999;
-            font-size: 0.85em;
+            font-size: 13px;
         }
-        .footer a { color: #48BB78; text-decoration: none; }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Gizlilik Politikası</h1>
-        <p>Bebem: Bebek Takip &amp; Emzirme</p>
-    </div>
     <div class="container">
-        <div class="updated">Son güncelleme: 1 Nisan 2026</div>
-
-        <div class="card">
-            <h2>1. Genel Bakış</h2>
-            <p>Bebem: Bebek Takip &amp; Emzirme uygulaması, kullanıcıların gizliliğine büyük önem verir. Bu gizlilik politikası, uygulamamızın verilerinizi nasıl işlediğini açıklamaktadır.</p>
+        <div class="header">
+            <h1>Gizlilik Politikası</h1>
+            <p>Son güncelleme: 2 Nisan 2026</p>
         </div>
 
         <div class="card">
-            <h2>2. Toplanan Veriler</h2>
-            <p>Uygulamamız aşağıdaki verileri yalnızca cihazınızda yerel olarak saklar:</p>
+            <h2>1. Genel Bakış</h2>
+            <p>Bebem: Bebek Takip &amp; Emzirme ("Uygulama"), bebeğinizin günlük rutinlerini takip etmek amacıyla geliştirilmiş bir mobil uygulamadır. Gizliliğinize saygı duyuyor ve kişisel verilerinizin korunmasını ciddiye alıyoruz.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Ücretsiz ve Pro Sürüm: Veri Toplama Farkı</h2>
+            <p>Uygulamanın ücretsiz ve Pro sürümleri arasında veri toplama açısından önemli bir fark bulunmaktadır:</p>
+
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Konu</th>
+                        <th><span class="badge-free">ÜCRETSİZ</span></th>
+                        <th><span class="badge-pro">PRO</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Veri toplama</strong></td>
+                        <td>Herhangi bir veri toplanmaz</td>
+                        <td>Anonimleştirilmiş veriler toplanır</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Uzak sunucuya veri gönderimi</strong></td>
+                        <td>Gönderilmez</td>
+                        <td>Anonimleştirilmiş olarak gönderilir</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Kişisel veri paylaşımı</strong></td>
+                        <td>Paylaşılmaz</td>
+                        <td>Paylaşılmaz</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reklamlar (AdMob)</strong></td>
+                        <td>Gösterilir</td>
+                        <td>Gösterilmez</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AI özellikleri</strong></td>
+                        <td>Yok</td>
+                        <td>Anonimleştirilmiş veri ile çalışır</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="highlight-box highlight-free">
+                <p>Ücretsiz sürümde herhangi bir veri toplanmaz ve uzak sunuculara gönderilmez. Tüm verileriniz yalnızca cihazınızda saklanır.</p>
+            </div>
+            <div class="highlight-box highlight-pro">
+                <p>Pro sürümde yapay zeka özellikleri için veriler anonimleştirilerek sunuculara gönderilir. Bu veriler kişisel olarak tanımlanabilir değildir.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>3. Ücretsiz Sürüm — Veri Saklama</h2>
+            <p>Ücretsiz sürümde girdiğiniz tüm veriler <strong>yalnızca cihazınızın yerel depolama alanında</strong> saklanır:</p>
             <ul>
                 <li>Bebek profil bilgileri (isim, cinsiyet, doğum tarihi)</li>
                 <li>Beslenme, emzirme, uyku ve bez değişim kayıtları</li>
                 <li>Büyüme ve sağlık takip verileri</li>
-                <li>Fotoğraflar ve albümler</li>
                 <li>Bildirim tercihleri</li>
             </ul>
-            <p style="margin-top:10px;"><strong>Kişisel bebek verileriniz uzak sunuculara gönderilmez veya üçüncü taraflarla paylaşılmaz.</strong></p>
+            <p><strong>Bu veriler toplanmaz, uzak sunuculara gönderilmez ve üçüncü taraflarla paylaşılmaz.</strong></p>
         </div>
 
         <div class="card">
-            <h2>3. Veri Depolama</h2>
-            <p>Tüm bebek takip verileriniz yalnızca cihazınızdaki yerel veritabanında saklanır. Temel özellikler tamamen çevrimiçi bağlantı gerektirmeden çalışır.</p>
-        </div>
-
-        <div class="card">
-            <h2>4. Üçüncü Taraf Hizmetleri</h2>
-            <p>Uygulama aşağıdaki üçüncü taraf hizmetlerini kullanmaktadır:</p>
+            <h2>4. Pro Sürüm — Anonimleştirilmiş Veri Toplama</h2>
+            <p>Pro sürümde, yapay zeka özellikleri için aşağıdaki veriler anonimleştirilerek sunuculara gönderilir:</p>
             <ul>
-                <li>
-                    <strong>RevenueCat</strong> — Pro abonelik işlemlerini yönetmek için kullanılır. RevenueCat, satın alma geçmişi ve abonelik durumu gibi işlem verilerini işler. Kişisel bebek verileriniz RevenueCat ile paylaşılmaz. Daha fazla bilgi: <a href="https://www.revenuecat.com/privacy" target="_blank" style="color: #48BB78;">revenuecat.com/privacy</a>
-                </li>
-                <li style="margin-top:10px;">
-                    <strong>Google AdMob</strong> — Ücretsiz plan kullanan kullanıcılara reklam göstermek için kullanılır. AdMob, reklam kişiselleştirmesi amacıyla cihaz tanımlayıcısı ve reklam etkileşim verileri toplayabilir. Pro aboneler reklam görmez. Daha fazla bilgi: <a href="https://policies.google.com/privacy" target="_blank" style="color: #48BB78;">policies.google.com/privacy</a>
-                </li>
+                <li>Genel kullanım istatistikleri (özellik kullanım sıklığı gibi)</li>
+                <li>AI raporu oluşturmak için gereken beslenme ve uyku özet verileri (kimliğinizle ilişkilendirilmez)</li>
             </ul>
+            <p><strong>Kişisel tanımlayıcı bilgiler (isim, doğum tarihi vb.) hiçbir zaman sunuculara gönderilmez.</strong> Tüm iletim şifreli (HTTPS) bağlantı üzerinden gerçekleşir.</p>
         </div>
 
         <div class="card">
-            <h2>5. Reklamlar (Ücretsiz Plan)</h2>
-            <p>Ücretsiz plan kullanıcılarına Google AdMob aracılığıyla reklamlar gösterilir. Bu reklamlar, cihaz tanımlayıcısı gibi veriler kullanılarak kişiselleştirilebilir. Reklam kişiselleştirmesini cihaz ayarlarınızdan kapatabilirsiniz. Pro aboneliğe geçerek reklamlardan tamamen kurtulabilirsiniz.</p>
+            <h2>5. Üçüncü Taraf Hizmetler</h2>
+            <p>Uygulama aşağıdaki üçüncü taraf hizmetleri kullanmaktadır:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hizmet</th>
+                        <th>Amaç</th>
+                        <th>Kapsam</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>RevenueCat</strong></td>
+                        <td>Pro abonelik yönetimi ve satın alma doğrulama</td>
+                        <td>Tüm kullanıcılar</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Google AdMob</strong></td>
+                        <td>Uygulama içi reklamlar</td>
+                        <td>Yalnızca ücretsiz kullanıcılar</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Bu hizmetler kendi gizlilik politikalarına tabidir. RevenueCat için <a href="https://www.revenuecat.com/privacy" style="color:#2471A3;" target="_blank">revenuecat.com/privacy</a>, Google için <a href="https://policies.google.com/privacy" style="color:#2471A3;" target="_blank">policies.google.com/privacy</a> adreslerini inceleyebilirsiniz.</p>
         </div>
 
         <div class="card">
-            <h2>6. Abonelik ve Satın Almalar</h2>
-            <p>Pro abonelik işlemleri Apple App Store ve RevenueCat altyapısı üzerinden gerçekleştirilir. Ödeme bilgileriniz yalnızca Apple tarafından işlenir; uygulamamız kredi kartı veya ödeme bilgilerinize erişmez. Abonelik yönetimi (iptal, yenileme) App Store üzerinden yapılır.</p>
+            <h2>6. Reklamlar (Ücretsiz Kullanıcılar)</h2>
+            <p>Ücretsiz sürümde Google AdMob tarafından sunulan reklamlar gösterilir. AdMob, reklam kişiselleştirme amacıyla cihaz tanımlayıcıları ve kullanım verileri toplayabilir. Bu, AdMob'un kendi gizlilik politikasına tabidir. Pro üyeliğe geçerek reklamsız deneyim yaşayabilirsiniz.</p>
         </div>
 
         <div class="card">
-            <h2>7. Fotoğraflar ve Kamera Erişimi</h2>
+            <h2>7. Abonelik ve Satın Almalar</h2>
+            <p>Pro üyelik, RevenueCat altyapısı üzerinden App Store aracılığıyla yönetilir. Abonelik satın alındığında RevenueCat, işlemi doğrulamak için gerekli verileri işler. Ödeme bilgileriniz Apple tarafından güvenli şekilde işlenir; uygulamamız ödeme bilgilerinize erişmez. Abonelik yönetimi (iptal, yenileme) App Store üzerinden yapılır.</p>
+        </div>
+
+        <div class="card">
+            <h2>8. Cihaz İzinleri</h2>
+            <p>Uygulama aşağıdaki cihaz izinlerini talep edebilir:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>İzin</th>
+                        <th>Amaç</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bildirimler</td>
+                        <td>Beslenme, uyku ve bakım hatırlatıcıları için</td>
+                    </tr>
+                    <tr>
+                        <td>Kamera / Galeri</td>
+                        <td>Bebek fotoğrafı eklemek için (Pro)</td>
+                    </tr>
+                    <tr>
+                        <td>İnternet Erişimi</td>
+                        <td>RevenueCat abonelik doğrulama, AdMob reklamlar ve Pro AI özellikleri için</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p>Bu izinler yalnızca belirtilen amaçlarla kullanılır.</p>
+        </div>
+
+        <div class="card">
+            <h2>9. Fotoğraflar</h2>
             <p>Uygulama, yalnızca siz istediğinizde bebek fotoğrafları eklemek için kamera ve galeri erişimi talep eder. Fotoğraflar cihazınızda yerel olarak saklanır ve hiçbir yere yüklenmez.</p>
         </div>
 
         <div class="card">
-            <h2>8. Bildirimler</h2>
-            <p>Uygulama, beslenme ve bakım hatırlatmaları için yerel bildirimler gönderir. Bu bildirimler tamamen cihazınızda oluşturulur ve herhangi bir sunucuyla iletişim kurmaz.</p>
-        </div>
-
-        <div class="card">
-            <h2>9. Veri Silme</h2>
-            <p>Uygulamayı cihazınızdan kaldırdığınızda tüm yerel verileriniz otomatik olarak silinir. RevenueCat'teki abonelik kayıtları için support@revenuecat.com adresine başvurabilirsiniz.</p>
-        </div>
-
-        <div class="card">
             <h2>10. Çocuk Gizliliği</h2>
-            <p>Uygulama, ebeveynlerin bebeklerini takip etmesi amacıyla tasarlanmıştır. 13 yaşın altındaki çocuklardan doğrudan veri toplamayız. Tüm bebek takip verileri yalnızca ebeveyn/bakıcı tarafından girilir ve cihazda yerel olarak saklanır.</p>
+            <p>Uygulama, ebeveynlerin bebeklerini takip etmesi amacıyla tasarlanmıştır. 13 yaşın altındaki çocuklardan doğrudan veri toplamayız. Tüm bebek takip verileri yalnızca ebeveyn veya bakıcı tarafından girilir. Kişisel bebek verileri üçüncü taraflarla paylaşılmaz.</p>
         </div>
 
         <div class="card">
-            <h2>11. Değişiklikler</h2>
-            <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama içinden bildirilecektir.</p>
+            <h2>11. Veri Silme</h2>
+            <p>Uygulamayı cihazınızdan kaldırdığınızda tüm yerel veriler kalıcı olarak silinir. Uygulama içinden de kayıtlarınızı istediğiniz zaman silebilirsiniz. RevenueCat'teki abonelik kayıtları için <a href="mailto:support@revenuecat.com" style="color:#2471A3;">support@revenuecat.com</a> adresine başvurabilirsiniz.</p>
         </div>
 
         <div class="card">
-            <h2>12. İletişim</h2>
+            <h2>12. Değişiklikler</h2>
+            <p>Bu gizlilik politikası zaman zaman güncellenebilir. Önemli değişiklikler uygulama içinden ve uygulama güncellemesiyle birlikte duyurulacaktır.</p>
+        </div>
+
+        <div class="card">
+            <h2>13. İletişim</h2>
             <p>Gizlilik politikamız hakkında sorularınız için bizimle iletişime geçebilirsiniz:</p>
-            <p><strong>E-posta:</strong> osmandede880@gmail.com</p>
+            <p><strong>E-posta:</strong> <a href="mailto:osmandede880@gmail.com" style="color:#2471A3;">osmandede880@gmail.com</a></p>
         </div>
-    </div>
-    <div class="footer">
-        <p>&copy; 2026 Bebem: Bebek Takip &amp; Emzirme | <a href="index.html">Destek Sayfası</a></p>
+
+        <div class="back-link">
+            <a href="index.html">Ana Sayfaya Dön</a>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2026 Bebem: Bebek Takip &amp; Emzirme. Tüm hakları saklıdır.</p>
+        </div>
     </div>
 </body>
 </html>
